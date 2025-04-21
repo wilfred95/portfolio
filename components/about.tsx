@@ -50,7 +50,7 @@ export default function About() {
             className="flex flex-col justify-center"
           >
             <p className="text-lg text-zinc-300 mb-6">
-            I am a back-end software engineer with additional expertise in DevOps. With over 4 years of experience, I have worked with <span className="text-blue-400 font-semibold">startups</span>on diverse projects, ranging from web RESTful APIs to asynchronous microservices and modern cloud-native deployments.
+            I am a back-end software engineer with additional expertise in DevOps. With over 4 years of experience, I have worked with <span className="text-blue-400 font-semibold">startups</span> on diverse projects, ranging from web RESTful APIs to asynchronous microservices and modern cloud-native deployments.
             </p>
             <p className="text-lg text-zinc-300">
               I'm proficient in Node.js development using various frameworks, I have also led and mentored multiple development teams, helping them deliver successful projects while enhancing their software engineering practices.
