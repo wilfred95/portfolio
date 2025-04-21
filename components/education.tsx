@@ -49,6 +49,26 @@ export default function Education() {
         "Control and Signal Processing",
       ],
     },
+    {
+        id: 2,
+        degree: "Associate Degree in Electrical/Electronics Engineering",
+        institution: "Abraham Adesanya Polytechnic",
+        location: "Ogun State, Nigeria",
+        period: "2013 - 2015",
+        description: "Focused on understanding of complex systems and hands-on experience in embedded programming and emerging technologies.",
+        // publications: [],
+        courses: [
+            "Programmable Logic Controller (PLC)", 
+            "Power System Engineering", 
+            "Telecommunication", 
+            "Engineering Drawing", 
+            "Electronics", 
+            "Programming", 
+            "Microcontroller", 
+            "Measurement and Instrumentation", 
+            "Engineering Machines and Technology",
+        ],
+      },
   ]
 
   const fadeIn = {
