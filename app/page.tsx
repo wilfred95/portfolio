@@ -7,6 +7,7 @@ import Contact from "@/components/contact"
 import {BlogPreview} from "@/components/blog-preview"
 import LoadingSpinner from "@/components/ui/loading-spinner"
 import Education from "@/components/education"
+import Experience from "@/components/experience"
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <About />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Experience />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <Education />
