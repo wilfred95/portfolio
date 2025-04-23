@@ -1,33 +1,42 @@
 "use client"
 
-import { motion } from 'framer-motion'
-import { Card, CardContent } from '@/components/ui/card'
-import { Calendar } from 'lucide-react'
+import { motion } from "framer-motion"
+import { Card, CardContent } from "@/components/ui/card"
+import { Calendar, Clock } from "lucide-react"
+import Image from "next/image"
 
 const blogPosts = [
   {
     id: 1,
-    title: 'How to Build a QR Code Generator for URLs with Node.js, Next.js, and Azure Blob Storage',
-    excerpt: 'This tutorial covers the process of building a QR code generator for URLs using Node.js, Next.js, and Azure Blob Storage. The application will allow users to input a URL, generate a corresponding QR code, and store it in Azure Blob Storage. Next.js will handle displaying the generated QR code on the web interface.',
-    date: 'April 2024',
-    readTime: '5 min read',
-    externalUrl: 'https://www.freecodecamp.org/news/build-a-qr-code-generator-using-nodejs-nextjs-azure-blob-storage/'
+    title: "How to Build a QR Code Generator for URLs with Node.js, Next.js, and Azure Blob Storage",
+    excerpt:
+      "This tutorial covers the process of building a QR code generator for URLs using Node.js, Next.js, and Azure Blob Storage.",
+    date: "April 2024",
+    readTime: "5 min read",
+    externalUrl: "https://www.freecodecamp.org/news/build-a-qr-code-generator-using-nodejs-nextjs-azure-blob-storage/",
+    image: "/qr.png",
+    alt: "QR Code Generator Tutorial",
   },
   {
     id: 2,
-    title: 'How to Run a Postgres Database in Azure Kubernetes Service and Integrate it with a Node.js Express Application',
-    excerpt: 'This tutorial explains how to run a PostgreSQL database on Azure Kubernetes Service (AKS) and integrate it with a Node.js Express application. The web application will accept user input and store the data in a PostgreSQL database. Azure Blob Storage will be used to persist the database files, and the entire application will be deployed on AKS.',
-    date: 'May 2024',
-    readTime: '40 min read',
-    externalUrl: 'https://www.freecodecamp.org/news/how-to-run-postgres-in-kubernetes/'
+    title: "How to Run a Postgres Database in Azure Kubernetes Service",
+    excerpt:
+      "This tutorial explains how to run a PostgreSQL database on Azure Kubernetes Service (AKS) and integrate it with a Node.js Express application.",
+    date: "May 2024",
+    readTime: "40 min read",
+    externalUrl: "https://www.freecodecamp.org/news/how-to-run-postgres-in-kubernetes/",
+    image: "/aks.png",
+    alt: "Postgres on Kubernetes Tutorial",
   },
   {
     id: 3,
-    title: 'A Guide to Connecting to PostgreSQL with Supabase and Sequelize ORM',
-    excerpt: 'This tutorial demonstrates how to connect to a PostgreSQL database using Supabase and Sequelize ORM. A simple web application will be built to accept user input and store the data in a PostgreSQL database. Supabase will be used to set up and manage the database, while Sequelize ORM will handle interactions with the database.',
-    date: 'November 2023',
-    readTime: '10 min read',
-    externalUrl: 'https://wilfred9.hashnode.dev/a-guide-to-connecting-to-postgresql-with-supabase-and-sequelize-orm'
+    title: "A Guide to Connecting to PostgreSQL with Supabase and Sequelize ORM",
+    excerpt: "This tutorial demonstrates how to connect to a PostgreSQL database using Supabase and Sequelize ORM.",
+    date: "November 2023",
+    readTime: "10 min read",
+    externalUrl: "https://wilfred9.hashnode.dev/a-guide-to-connecting-to-postgresql-with-supabase-and-sequelize-orm",
+    image: "/supabase.png",
+    alt: "Supabase and Sequelize Tutorial",
   },
 ]
 
@@ -42,7 +51,7 @@ const fadeIn = {
   },
 }
 
-export function BlogPreview() {
+export default function BlogPreview() {
   return (
     <section id="blog" className="py-20 bg-zinc-950 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
@@ -77,19 +86,38 @@ export function BlogPreview() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeIn}
               transition={{ delay: 0.1 * index }}
+              className="flex flex-col h-full"
             >
               <Card className="bg-zinc-900 border-zinc-800 overflow-hidden h-full flex flex-col hover:border-blue-500/50 transition-colors duration-300">
-                <CardContent className="p-6 flex-grow">
-                  <div className="flex items-center text-xs text-zinc-500 mb-4">
-                    <Calendar className="h-3 w-3 mr-1" />
-                    <span>{post.date}</span>
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={post.image || "/placeholder.svg"}
+                    alt={post.alt}
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent opacity-60"></div>
+                </div>
+                <CardContent className="p-6 flex-grow flex flex-col">
+                  <div className="flex items-center justify-between text-xs text-zinc-500 mb-4">
+                    <div className="flex items-center">
+                      <Calendar className="h-3 w-3 mr-1" />
+                      <span>{post.date}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="h-3 w-3 mr-1" />
+                      <span>{post.readTime}</span>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-zinc-200 mb-2">{post.title}</h3>
-                  <p className="text-zinc-400 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-zinc-500">{post.readTime}</span>
+                  <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="group">
+                    <h3 className="text-xl font-semibold text-zinc-200 mb-2 group-hover:text-blue-400 transition-colors">
+                      {post.title}
+                    </h3>
+                  </a>
+                  <p className="text-zinc-400 mb-4 flex-grow">{post.excerpt}</p>
+                  <div className="flex justify-end mt-auto">
                     <a
-                      target="_blank" 
+                      target="_blank"
                       rel="noopener noreferrer"
                       href={post.externalUrl}
                       className="text-blue-500 hover:text-blue-400 text-sm font-medium transition-colors duration-200"
