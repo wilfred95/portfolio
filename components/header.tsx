@@ -1,41 +1,39 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useTheme } from "next-themes";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import Logo from "@/components/logo";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { useTheme } from "next-themes"
+import { Menu, X, Sun, Moon, FileText } from "lucide-react"
+import Logo from "@/components/logo"
+import { Button } from "@/components/ui/button"
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen)
 
   const navItems = [
     { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
+    { name: "Projects", href: "#projects" },
     { name: "Tech Stack", href: "#tech-stack" },
     { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
-  ];
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="h-10 w-10" />
-          <span className="font-mono text-lg font-bold tracking-tight text-white">
-            Ayomide Wilfred
-          </span>
+          <span className="font-mono text-lg font-bold tracking-tight text-white">Ayomide Wilfred</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -49,6 +47,21 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-zinc-700 hover:border-blue-500 hover:bg-zinc-800 text-zinc-300 hover:text-white"
+            asChild
+            onClick={(e) => {
+              e.preventDefault();
+              window.open('/Resume.pdf', '_blank');
+            }}
+          >
+            <a href="/Resume.pdf" download className="flex items-center">
+              <FileText className="h-4 w-4 mr-2" />
+              Download CV
+            </a>
+          </Button>
           {mounted && (
             <Button
               variant="ghost"
@@ -84,11 +97,7 @@ export default function Header() {
             </Button>
           )}
           <Button variant="ghost" size="icon" onClick={toggleMenu}>
-            {isOpen ? (
-              <X className="h-6 w-6 text-white" />
-            ) : (
-              <Menu className="h-6 w-6 text-white" />
-            )}
+            {isOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>
@@ -109,10 +118,25 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-zinc-700 hover:border-blue-500 hover:bg-zinc-800 text-zinc-300 hover:text-white w-full justify-center"
+                asChild
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('/Resume.pdf', '_blank');
+                }}
+              >
+                <a href="/Resume.pdf" download className="flex items-center">
+                  <FileText className="h-4 w-4 mr-2" />
+                  Download CV
+                </a>
+              </Button>
             </nav>
           </div>
         </div>
       )}
     </header>
-  );
+  )
 }

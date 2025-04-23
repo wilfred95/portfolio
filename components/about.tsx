@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2, Server, Leaf, Music } from "lucide-react"
+import { Code2, Server, Leaf, Music, FileText } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 
 export default function About() {
   const fadeIn = {
@@ -52,11 +53,24 @@ export default function About() {
             <p className="text-lg text-zinc-300 mb-6">
             I am a back-end software engineer with additional expertise in DevOps. With over 4 years of experience, I have worked with <span className="text-blue-400 font-semibold">startups</span> on diverse projects, ranging from web RESTful APIs to asynchronous microservices and modern cloud-native deployments.
             </p>
-            <p className="text-lg text-zinc-300">
-              I'm proficient in Node.js development using various frameworks, I have also led and mentored multiple development teams, helping them deliver successful projects while enhancing their software engineering practices.
+            <p className="text-lg text-zinc-300 mb-6">
+            I'm proficient in Node.js development using various frameworks, I have also led and mentored multiple development teams, helping them deliver successful projects while enhancing their software engineering practices.
               I'm particularly interested in AI integration and sustainable technology solutions that make a positive
               impact.
             </p>
+            <div className="flex justify-start">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-zinc-700 hover:border-blue-500 hover:bg-zinc-800 text-zinc-300 hover:text-white"
+                asChild
+              >
+                <a href="/Ayomide_Wilfred_CV.pdf" download className="flex items-center">
+                  <FileText className="h-5 w-5 mr-2" />
+                  Download My CV
+                </a>
+              </Button>
+            </div>
           </motion.div>
 
           <motion.div

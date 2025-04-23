@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Logo from "@/components/logo"
 
@@ -72,6 +72,7 @@ export default function Hero() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
+          className="flex flex-col sm:flex-row gap-4"
         >
           <Button
             size="lg"
@@ -80,6 +81,16 @@ export default function Hero() {
           >
             Explore My Work
             <ArrowDown className="ml-2 h-4 w-4" />
+          </Button>
+
+          <Button size="lg" variant="outline" className="border-zinc-600 hover:border-blue-500 text-white" asChild onClick={(e) => {
+            e.preventDefault();
+            window.open('/Resume.pdf', '_blank');
+          }}>
+            <a href="/Resume.pdf" download>
+              <FileText className="mr-2 h-4 w-4" />
+              Download CV
+            </a>
           </Button>
         </motion.div>
       </div>
