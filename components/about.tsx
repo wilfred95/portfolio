@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Code2, Server, Leaf, Music, FileText } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion";
+import { Code2, Server, Leaf, Music, FileText } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function About() {
   const fadeIn = {
@@ -16,7 +16,7 @@ export default function About() {
         duration: 0.5,
       },
     }),
-  }
+  };
 
   return (
     <section id="about" className="py-20 bg-zinc-900">
@@ -51,12 +51,19 @@ export default function About() {
             className="flex flex-col justify-center"
           >
             <p className="text-lg text-zinc-300 mb-6">
-            I am a back-end software engineer with additional expertise in DevOps. With over 4 years of experience, I have worked with <span className="text-blue-400 font-semibold">startups</span> on diverse projects, ranging from web RESTful APIs to asynchronous microservices and modern cloud-native deployments.
+              I am a back-end software engineer with additional expertise in
+              DevOps. With over 4 years of experience, I have worked with{" "}
+              <span className="text-blue-400 font-semibold">startups</span> on
+              diverse projects, ranging from web RESTful APIs to asynchronous
+              microservices and modern cloud-native deployments.
             </p>
             <p className="text-lg text-zinc-300 mb-6">
-            I'm proficient in Node.js development using various frameworks, I have also led and mentored multiple development teams, helping them deliver successful projects while enhancing their software engineering practices.
-              I'm particularly interested in AI integration and sustainable technology solutions that make a positive
-              impact.
+              I'm proficient in Node.js development using various frameworks, I
+              have also led and mentored multiple development teams, helping
+              them deliver successful projects while enhancing their software
+              engineering practices. I'm particularly interested in AI
+              integration and sustainable technology solutions that make a
+              positive impact.
             </p>
             <div className="flex justify-start">
               <Button
@@ -65,7 +72,11 @@ export default function About() {
                 className="border-zinc-700 hover:border-blue-500 hover:bg-zinc-800 text-zinc-300 hover:text-white"
                 asChild
               >
-                <a href="/Ayomide_Wilfred_CV.pdf" download className="flex items-center">
+                <a
+                  href="/Ayomide_Wilfred_CV.pdf"
+                  download
+                  className="flex items-center"
+                >
                   <FileText className="h-5 w-5 mr-2" />
                   Download My CV
                 </a>
@@ -85,7 +96,9 @@ export default function About() {
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <Code2 className="h-10 w-10 text-blue-500 mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Clean Code</h3>
-                <p className="text-zinc-400 text-sm">Building maintainable, well-structured systems</p>
+                <p className="text-zinc-400 text-sm">
+                  Building maintainable, well-structured systems
+                </p>
               </CardContent>
             </Card>
 
@@ -93,7 +106,9 @@ export default function About() {
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <Server className="h-10 w-10 text-red-500 mb-4" />
                 <h3 className="text-lg font-semibold mb-2">CI/CD Expert</h3>
-                <p className="text-zinc-400 text-sm">Automating deployment pipelines for efficiency</p>
+                <p className="text-zinc-400 text-sm">
+                  Automating deployment pipelines for efficiency
+                </p>
               </CardContent>
             </Card>
 
@@ -101,7 +116,9 @@ export default function About() {
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <Leaf className="h-10 w-10 text-green-500 mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Sustainability</h3>
-                <p className="text-zinc-400 text-sm">Passionate about clean energy solutions</p>
+                <p className="text-zinc-400 text-sm">
+                  Passionate about clean energy solutions
+                </p>
               </CardContent>
             </Card>
 
@@ -109,12 +126,14 @@ export default function About() {
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <Music className="h-10 w-10 text-purple-500 mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Guitar Player</h3>
-                <p className="text-zinc-400 text-sm">Finding harmony in code and music</p>
+                <p className="text-zinc-400 text-sm">
+                  Finding harmony in code and music
+                </p>
               </CardContent>
             </Card>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

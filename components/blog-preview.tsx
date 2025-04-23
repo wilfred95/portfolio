@@ -1,19 +1,21 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, Clock } from "lucide-react"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar, Clock } from "lucide-react";
+import Image from "next/image";
 
 const blogPosts = [
   {
     id: 1,
-    title: "How to Build a QR Code Generator for URLs with Node.js, Next.js, and Azure Blob Storage",
+    title:
+      "How to Build a QR Code Generator for URLs with Node.js, Next.js, and Azure Blob Storage",
     excerpt:
       "This tutorial covers the process of building a QR code generator for URLs using Node.js, Next.js, and Azure Blob Storage.",
     date: "April 2024",
     readTime: "5 min read",
-    externalUrl: "https://www.freecodecamp.org/news/build-a-qr-code-generator-using-nodejs-nextjs-azure-blob-storage/",
+    externalUrl:
+      "https://www.freecodecamp.org/news/build-a-qr-code-generator-using-nodejs-nextjs-azure-blob-storage/",
     image: "/qr.png",
     alt: "QR Code Generator Tutorial",
   },
@@ -24,21 +26,25 @@ const blogPosts = [
       "This tutorial explains how to run a PostgreSQL database on Azure Kubernetes Service (AKS) and integrate it with a Node.js Express application.",
     date: "May 2024",
     readTime: "40 min read",
-    externalUrl: "https://www.freecodecamp.org/news/how-to-run-postgres-in-kubernetes/",
+    externalUrl:
+      "https://www.freecodecamp.org/news/how-to-run-postgres-in-kubernetes/",
     image: "/aks.png",
     alt: "Postgres on Kubernetes Tutorial",
   },
   {
     id: 3,
-    title: "A Guide to Connecting to PostgreSQL with Supabase and Sequelize ORM",
-    excerpt: "This tutorial demonstrates how to connect to a PostgreSQL database using Supabase and Sequelize ORM.",
+    title:
+      "A Guide to Connecting to PostgreSQL with Supabase and Sequelize ORM",
+    excerpt:
+      "This tutorial demonstrates how to connect to a PostgreSQL database using Supabase and Sequelize ORM.",
     date: "November 2023",
     readTime: "10 min read",
-    externalUrl: "https://wilfred9.hashnode.dev/a-guide-to-connecting-to-postgresql-with-supabase-and-sequelize-orm",
+    externalUrl:
+      "https://wilfred9.hashnode.dev/a-guide-to-connecting-to-postgresql-with-supabase-and-sequelize-orm",
     image: "/supabase.png",
     alt: "Supabase and Sequelize Tutorial",
   },
-]
+];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -49,7 +55,7 @@ const fadeIn = {
       duration: 0.5,
     },
   },
-}
+};
 
 export default function BlogPreview() {
   return (
@@ -72,8 +78,12 @@ export default function BlogPreview() {
             variants={fadeIn}
             className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mb-8"
           ></motion.div>
-          <motion.p variants={fadeIn} className="text-zinc-400 max-w-2xl mx-auto">
-            Thoughts, insights, and tutorials on backend development, AI integration, and clean architecture.
+          <motion.p
+            variants={fadeIn}
+            className="text-zinc-400 max-w-2xl mx-auto"
+          >
+            Thoughts, insights, and tutorials on backend development, AI
+            integration, and clean architecture.
           </motion.p>
         </motion.div>
 
@@ -109,7 +119,12 @@ export default function BlogPreview() {
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="group">
+                  <a
+                    href={post.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
                     <h3 className="text-xl font-semibold text-zinc-200 mb-2 group-hover:text-blue-400 transition-colors">
                       {post.title}
                     </h3>
@@ -132,5 +147,5 @@ export default function BlogPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }

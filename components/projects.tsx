@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 type Project = {
-  id: number
-  title: string
-  description: string
-  image: string
-  tags: string[]
-  demoUrl?: string
-  repoUrl?: string
-}
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  demoUrl?: string;
+  repoUrl?: string;
+};
 
 export default function Projects() {
   const [projects] = useState<Project[]>([
@@ -25,38 +25,72 @@ export default function Projects() {
       description:
         "A platform connecting clean energy providers with consumers, built with Node.js and MySQL using Clean Architecture principles.",
       image: "/uwana-packages.png",
-      tags: ["Node.js", "MySQL", "Docker", "Gitlab", "ECS", "AWS Amplify","AWS S3 Bucket"],
+      tags: [
+        "Node.js",
+        "MySQL",
+        "Docker",
+        "Gitlab",
+        "ECS",
+        "AWS Amplify",
+        "AWS S3 Bucket",
+      ],
       demoUrl: "https://uwanaconnect.com/packages?page=1",
       repoUrl: "https://uwanaconnect.com/packages?page=1",
     },
     {
       id: 2,
       title: "Sokozuri Africa",
-      description: "Sokozuri Africa is an online e-commerce platform designed to empower African vendors, artisans, and entrepreneurs by providing them with a digital marketplace to showcase and sell their products and services across the continent.",
+      description:
+        "Sokozuri Africa is an online e-commerce platform designed to empower African vendors, artisans, and entrepreneurs by providing them with a digital marketplace to showcase and sell their products and services across the continent.",
       image: "/Sokozuri-Home.png",
-      tags: ["Node.js", "PostgreSQL", "Express", "Docker", "WebSockets", "Redis",],
+      tags: [
+        "Node.js",
+        "PostgreSQL",
+        "Express",
+        "Docker",
+        "WebSockets",
+        "Redis",
+      ],
       demoUrl: "https://www.sokozuri.com/",
       repoUrl: "https://www.sokozuri.com/",
     },
     {
       id: 3,
       title: "Verify Your Customer",
-      description: "Verify Your Customers (VYC) is a digital identity verification solution. It offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",
+      description:
+        "Verify Your Customers (VYC) is a digital identity verification solution. It offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",
       image: "/verify1.png",
-      tags: ["Node.js", "PostgreSQL", "Express", "NFC Chip Reader SDK", "AWS S3 Bucket", "Docker", "Digital Ocean"],
+      tags: [
+        "Node.js",
+        "PostgreSQL",
+        "Express",
+        "NFC Chip Reader SDK",
+        "AWS S3 Bucket",
+        "Docker",
+        "Digital Ocean",
+      ],
       demoUrl: "https://vyc-c5zkr.ondigitalocean.app/",
       repoUrl: "https://vyc-c5zkr.ondigitalocean.app/",
     },
     {
       id: 4,
       title: "Verify Your Customer",
-      description: "Verify Your Customers (VYC) is a digital identity verification solution. It offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",
+      description:
+        "Verify Your Customers (VYC) is a digital identity verification solution. It offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",
       image: "/verify4.png",
-      tags: ["Node.js", "PostgreSQL", "Express", "NFC Chip Reader SDK", "AWS S3 Bucket", "Docker", "Digital Ocean"],
+      tags: [
+        "Node.js",
+        "PostgreSQL",
+        "Express",
+        "NFC Chip Reader SDK",
+        "AWS S3 Bucket",
+        "Docker",
+        "Digital Ocean",
+      ],
       demoUrl: "https://vyc-c5zkr.ondigitalocean.app/",
       repoUrl: "https://vyc-c5zkr.ondigitalocean.app/",
     },
-  ])
+  ]);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -68,10 +102,13 @@ export default function Projects() {
         duration: 0.5,
       },
     }),
-  }
+  };
 
   return (
-    <section id="projects" className="py-20 bg-zinc-950 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 bg-zinc-950 relative overflow-hidden"
+    >
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -92,8 +129,13 @@ export default function Projects() {
             custom={1}
             className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mb-8"
           ></motion.div>
-          <motion.p variants={fadeInUp} custom={2} className="text-zinc-400 max-w-2xl mx-auto">
-            Explore my latest work showcasing clean architecture, scalable systems, and innovative solutions.
+          <motion.p
+            variants={fadeInUp}
+            custom={2}
+            className="text-zinc-400 max-w-2xl mx-auto"
+          >
+            Explore my latest work showcasing clean architecture, scalable
+            systems, and innovative solutions.
           </motion.p>
         </motion.div>
 
@@ -121,11 +163,17 @@ export default function Projects() {
                 </div>
 
                 <CardContent className="p-6 flex-grow">
-                  <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-white">
+                    {project.title}
+                  </h3>
                   <p className="text-zinc-400 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="bg-zinc-800 text-zinc-300 border-zinc-700">
+                      <Badge
+                        key={tag}
+                        variant="outline"
+                        className="bg-zinc-800 text-zinc-300 border-zinc-700"
+                      >
                         {tag}
                       </Badge>
                     ))}
@@ -135,7 +183,12 @@ export default function Projects() {
                 <CardFooter className="p-6 pt-0 flex justify-between">
                   {project.demoUrl && (
                     <Button variant="outline" size="sm" asChild>
-                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live
                       </a>
@@ -143,7 +196,12 @@ export default function Projects() {
                   )}
                   {project.repoUrl && (
                     <Button variant="outline" size="sm" asChild>
-                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
                         <Github className="h-4 w-4 mr-2" />
                         Code
                       </a>
@@ -156,5 +214,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

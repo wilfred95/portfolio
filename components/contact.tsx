@@ -1,9 +1,15 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Calendar, Github, Linkedin, Twitter, ExternalLink } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion";
+import {
+  Calendar,
+  Github,
+  Linkedin,
+  Twitter,
+  ExternalLink,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   const fadeIn = {
@@ -16,14 +22,25 @@ export default function Contact() {
         duration: 0.5,
       },
     }),
-  }
+  };
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, url: "https://github.com/ayowilfred95", label: "GitHub" },
-    { icon: <Linkedin className="h-5 w-5" />, url: "https://www.linkedin.com/in/ayomide-wilfred-95083a104/", label: "LinkedIn" },
-    { icon: <Twitter className="h-5 w-5" />, url: "https://x.com/AyomideWilfred9", label: "Twitter" },
-  ]
-
+    {
+      icon: <Github className="h-5 w-5" />,
+      url: "https://github.com/ayowilfred95",
+      label: "GitHub",
+    },
+    {
+      icon: <Linkedin className="h-5 w-5" />,
+      url: "https://www.linkedin.com/in/ayomide-wilfred-95083a104/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Twitter className="h-5 w-5" />,
+      url: "https://x.com/AyomideWilfred9",
+      label: "Twitter",
+    },
+  ];
 
   return (
     <section id="contact" className="py-20 bg-zinc-900">
@@ -46,8 +63,13 @@ export default function Contact() {
             custom={1}
             className="w-20 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mb-8"
           ></motion.div>
-          <motion.p variants={fadeIn} custom={2} className="text-zinc-400 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss collaboration opportunities? Book a call with me!
+          <motion.p
+            variants={fadeIn}
+            custom={2}
+            className="text-zinc-400 max-w-2xl mx-auto"
+          >
+            Have a project in mind or want to discuss collaboration
+            opportunities? Book a call with me!
           </motion.p>
         </motion.div>
 
@@ -61,10 +83,12 @@ export default function Contact() {
           >
             <Card className="bg-zinc-800 border-zinc-700 h-full">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-white">Connect With Me</h3>
+                <h3 className="text-xl font-bold mb-4 text-white">
+                  Connect With Me
+                </h3>
                 <p className="text-zinc-400 mb-6">
-                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
-                  vision.
+                  I'm always open to discussing new projects, creative ideas, or
+                  opportunities to be part of your vision.
                 </p>
 
                 <div className="flex flex-col space-y-4">
@@ -78,7 +102,12 @@ export default function Contact() {
                           className="border-zinc-700 hover:border-blue-500 hover:bg-zinc-700/50"
                           asChild
                         >
-                          <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
+                          <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={link.label}
+                          >
                             {link.icon}
                           </a>
                         </Button>
@@ -100,10 +129,12 @@ export default function Contact() {
             <Card className="bg-zinc-800 border-zinc-700 h-full">
               <CardContent className="p-6 flex flex-col items-center justify-center h-full">
                 <Calendar className="h-16 w-16 text-blue-500 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Book a Call</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Book a Call
+                </h3>
                 <p className="text-zinc-400 text-center mb-8">
-                  Schedule a 30-minute call with me to discuss your project, answer questions, or explore collaboration
-                  opportunities.
+                  Schedule a 30-minute call with me to discuss your project,
+                  answer questions, or explore collaboration opportunities.
                 </p>
                 <Button
                   size="lg"
@@ -125,5 +156,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
