@@ -5,6 +5,8 @@ import { GraduationCap, Calendar, BookOpen, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { useTheme } from "next-themes"
+
 
 type Publication = {
   title: string;
@@ -85,11 +87,12 @@ export default function Education() {
       },
     }),
   };
+  const { theme } = useTheme()
 
   return (
     <section
       id="education"
-      className="py-20 bg-zinc-950 relative overflow-hidden"
+      className={`py-20 relative overflow-hidden ${theme === "light" ? "bg-zinc-200" : "bg-zinc-950"}`}
     >
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">

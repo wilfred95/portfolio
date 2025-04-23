@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock } from "lucide-react";
 import Image from "next/image";
+import { useTheme } from "next-themes"
 
 const blogPosts = [
   {
@@ -58,8 +59,12 @@ const fadeIn = {
 };
 
 export default function BlogPreview() {
+  const { theme } = useTheme()
   return (
-    <section id="blog" className="py-20 bg-zinc-950 relative overflow-hidden">
+    <section
+      id="blog"
+      className={`py-20 relative overflow-hidden ${theme === "light" ? "bg-zinc-200" : "bg-zinc-950"}`}
+    >
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

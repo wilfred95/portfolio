@@ -10,8 +10,10 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes"
 
 export default function Contact() {
+  const { theme } = useTheme()
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -43,7 +45,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-zinc-900">
+    <section id="contact" className={`py-20 ${theme === "light" ? "bg-zinc-100" : "bg-zinc-900"}`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"

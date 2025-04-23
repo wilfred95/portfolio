@@ -5,6 +5,7 @@ import { Calendar, MapPin, Briefcase, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { useTheme } from "next-themes"
 
 type Experience = {
   id: number;
@@ -168,9 +169,10 @@ export default function Experience() {
       },
     }),
   };
+  const { theme } = useTheme()
 
   return (
-    <section id="experience" className="py-20 bg-zinc-900">
+    <section id="experience" className={`py-20 ${theme === "light" ? "bg-zinc-100" : "bg-zinc-900"}`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"

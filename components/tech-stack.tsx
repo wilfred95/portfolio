@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { useTheme } from "next-themes"
 
 type TechItem = {
   name: string
@@ -12,6 +13,7 @@ type TechItem = {
 
 export default function TechStack() {
   const [activeCategory, setActiveCategory] = useState<string>("languages")
+  const { theme } = useTheme()
 
   const techItems: TechItem[] = [
 
@@ -67,7 +69,7 @@ export default function TechStack() {
   }
 
   return (
-    <section id="tech-stack" className="py-20 bg-zinc-950">
+    <section id="tech-stack" className={`py-20 ${theme === "light" ? "bg-zinc-200" : "bg-zinc-950"}`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"

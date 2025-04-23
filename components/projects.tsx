@@ -6,6 +6,9 @@ import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes"
+
+
 
 type Project = {
   id: number;
@@ -92,6 +95,8 @@ export default function Projects() {
     },
   ]);
 
+  const { theme } = useTheme()
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -107,7 +112,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-zinc-950 relative overflow-hidden"
+      className={`py-20 relative overflow-hidden ${theme === "light" ? "bg-zinc-200" : "bg-zinc-950"}`}
     >
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">

@@ -29,11 +29,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b ${theme === "light" ? "bg-white/80 border-zinc-200" : "bg-zinc-950/80 border-zinc-800"}`}
+    >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="h-10 w-10" />
-          <span className="font-mono text-lg font-bold tracking-tight text-white">
+          <span
+            className={`font-mono text-lg font-bold tracking-tight ${theme === "light" ? "text-zinc-800" : "text-white"}`}
+          >
             Ayomide Wilfred
           </span>
         </Link>
@@ -44,7 +48,9 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-zinc-400 hover:text-white transition-colors duration-200 text-sm font-medium"
+              className={`text-sm font-medium transition-colors duration-200 ${
+                theme === "light" ? "text-zinc-600 hover:text-zinc-900" : "text-zinc-400 hover:text-white"
+              }`}
             >
               {item.name}
             </Link>
@@ -52,7 +58,11 @@ export default function Header() {
           <Button
             variant="outline"
             size="sm"
-            className="border-zinc-700 hover:border-blue-500 hover:bg-zinc-800 text-zinc-300 hover:text-white"
+            className={`hover:border-blue-500 ${
+              theme === "light"
+                ? "border-zinc-300 text-zinc-800 bg-white hover:bg-zinc-100"
+                : "border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:text-white"
+            }`}
             asChild
             onClick={(e) => {
               e.preventDefault();
@@ -74,7 +84,7 @@ export default function Header() {
               {theme === "dark" ? (
                 <Sun className="h-5 w-5 text-zinc-400 hover:text-white" />
               ) : (
-                <Moon className="h-5 w-5 text-zinc-400 hover:text-white" />
+                <Moon className="h-5 w-5 text-zinc-600 hover:text-zinc-900" />
               )}
               <span className="sr-only">Toggle theme</span>
             </Button>
@@ -93,16 +103,16 @@ export default function Header() {
               {theme === "dark" ? (
                 <Sun className="h-5 w-5 text-zinc-400 hover:text-white" />
               ) : (
-                <Moon className="h-5 w-5 text-zinc-400 hover:text-white" />
+                <Moon className="h-5 w-5 text-zinc-600 hover:text-zinc-900" />
               )}
               <span className="sr-only">Toggle theme</span>
             </Button>
           )}
           <Button variant="ghost" size="icon" onClick={toggleMenu}>
-            {isOpen ? (
-              <X className="h-6 w-6 text-white" />
+          {isOpen ? (
+              <X className={`h-6 w-6 ${theme === "light" ? "text-zinc-800" : "text-white"}`} />
             ) : (
-              <Menu className="h-6 w-6 text-white" />
+              <Menu className={`h-6 w-6 ${theme === "light" ? "text-zinc-800" : "text-white"}`} />
             )}
             <span className="sr-only">Toggle menu</span>
           </Button>
@@ -111,14 +121,20 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-zinc-900 border-b border-zinc-800">
+        <div
+        className={`md:hidden border-b ${
+          theme === "light" ? "bg-white border-zinc-200" : "bg-zinc-900 border-zinc-800"
+        }`}
+      >
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-zinc-400 hover:text-white transition-colors duration-200 text-sm font-medium py-2"
+                  className={`text-sm font-medium py-2 transition-colors duration-200 ${
+                    theme === "light" ? "text-zinc-600 hover:text-zinc-900" : "text-zinc-400 hover:text-white"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -127,7 +143,11 @@ export default function Header() {
               <Button
                 variant="outline"
                 size="sm"
-                className="border-zinc-700 hover:border-blue-500 hover:bg-zinc-800 text-zinc-300 hover:text-white w-full justify-center"
+                className={`w-full justify-center hover:border-blue-500 ${
+                  theme === "light"
+                    ? "border-zinc-300 text-zinc-800 bg-white hover:bg-zinc-100"
+                    : "border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:text-white"
+                }`}
                 asChild
                 onClick={(e) => {
                   e.preventDefault();
