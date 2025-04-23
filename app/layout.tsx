@@ -8,9 +8,13 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
+  title: "Ayomide Wilfred Portfolio",
   description: "Backend Developer | AI Builder | Sustainability Enthusiast",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 }
 
 export default function RootLayout({
