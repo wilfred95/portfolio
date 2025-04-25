@@ -6,6 +6,7 @@ import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Head from "next/head"; // Import Head component from next/head
 
 export const metadata: Metadata = {
   title: "Ayomide Wilfred Portfolio",
@@ -15,14 +16,7 @@ export const metadata: Metadata = {
     shortcut: "/logo.png",
     apple: "/logo.png",
   },
-  // Add Google Site Verification Meta Tag
   metadataBase: new URL("https://ayomide-wilfred.vercel.app"),
-  additionalMetaTags: [
-    {
-      name: "google-site-verification",
-      content: "googlec8e94f160f15533e", // replace with your actual verification code
-    },
-  ],
 };
 
 export default function RootLayout({
@@ -40,6 +34,10 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        {/* Add Google Site Verification meta tag here */}
+        <Head>
+          <meta name="google-site-verification" content="googlec8e94f160f15533e" />
+        </Head>
       </body>
     </html>
   );
