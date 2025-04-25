@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ayomide-wilfred.vercel.app
+
+# Sitemaps
+Sitemap: https://ayomide-wilfred.vercel.app/sitemap.xml

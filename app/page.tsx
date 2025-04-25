@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import metadata from "./metadata"
 import Hero from "@/components/hero"
 import About from "@/components/about"
 import Projects from "@/components/projects"
@@ -8,6 +9,8 @@ import BlogPreview from "@/components/blog-preview"
 import LoadingSpinner from "@/components/ui/loading-spinner"
 import Education from "@/components/education"
 import Experience from "@/components/experience"
+
+export { metadata }
 
 export default function Home() {
   return (
