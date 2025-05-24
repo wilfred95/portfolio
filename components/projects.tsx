@@ -26,10 +26,11 @@ export default function Projects() {
       id: 1,
       title: "Uwana Connect",
       description:
-        "A platform connecting clean energy providers with consumers, built with Node.js and MySQL using Clean Architecture principles.",
+        "A platform connecting clean energy providers with consumers, built with Node.js, Nestjs and MySQL using Clean Architecture principles.",
       image: "/uwana-packages.png",
       tags: [
         "Node.js",
+        "Nestjs",
         "MySQL",
         "Docker",
         "Gitlab",
@@ -48,8 +49,8 @@ export default function Projects() {
       image: "/Sokozuri-Home.png",
       tags: [
         "Node.js",
+        "Nestjs",
         "PostgreSQL",
-        "Express",
         "Docker",
         "WebSockets",
         "Redis",
