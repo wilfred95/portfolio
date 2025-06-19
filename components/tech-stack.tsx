@@ -28,14 +28,19 @@ export default function TechStack() {
     { name: "Express", icon: "🚂", category: "frameworks", proficiency: 90 },
     { name: "NestJS", icon: "🐈", category: "frameworks", proficiency: 85 },
     { name: "React", icon: "⚛️", category: "frameworks", proficiency: 75 },
+    {name: "TypeORM",icon:"",category:"frameworks",proficiency:85},
+    {name:"Sequelize",icon:"",category:"frameworks",proficiency:85},
+    {name:"Firebase",icon:"",category:"frameworks",proficiency:90},
 
     // Tools & Deployment
     { name: "Docker", icon: "🐳", category: "tools", proficiency: 90 },
     { name: "AWS ECS", icon: "☁️", category: "tools", proficiency: 85 },
     { name: "GitHub Actions", icon: "🔄", category: "tools", proficiency: 80 },
     { name: "Redis", icon: "🔴", category: "tools", proficiency: 85 },
+    {name: "BullMQ",icon:"",category:"tools",proficiency:85},
     { name: "Digital Ocean", icon: "🌊", category: "tools", proficiency: 90 },
     { name: "AWS", icon: "☁️", category: "tools", proficiency: 90 },
+    {name:"Stripe",icon:"",category:"tools",proficiency:90},
 
     // Databases
     { name: "PostgreSQL", icon: "🐘", category: "databases", proficiency: 95 },
