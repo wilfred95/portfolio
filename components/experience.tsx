@@ -24,6 +24,37 @@ export default function Experience() {
     {
       id: 1,
       position: "Backend Developer",
+      company: "Luftsocial",
+      location: "Remote",
+      period: "2025 - Present",
+      description:
+        "Led the development of a real-time messaging and notification system using NestJS and WebSockets, supporting 10,000+ concurrent connections. Architected a multi-channel notification infrastructure (In-App, Push, Email) that improved user engagement by 65%.",
+      responsibilities: [
+        "Designed and implemented a real-time notification system using NestJS Gateway and WebSockets, supporting multi-channel delivery (In-App, Push, Email) via a strategy pattern.",
+        "Built core messaging features including threaded replies, typing indicators, message reactions, read receipts, and content editing/deletion with live updates.",
+        "Integrated Firebase Cloud Messaging (FCM) for mobile push notifications and implemented a queuing system using Bullmq for reliable delivery, even while offline.",
+        "Ensured secure, high-performance communication by adding WebSocket auth middleware, rate limiting, content sanitization, and optimized database queries.",
+        "Followed SOLID principles, wrote unit tests, and maintained detailed API documentation to support scalability and maintainability.",
+       
+      ],
+      technologies: [
+        "Node.js",
+        "Nestjs",
+        "PostgreSQL",
+        "Docker",
+        "TypeORM",
+        "Redis",
+        "Bullmq",
+        "Firebase",
+        "WebSockets",
+        "Socket.IO",
+        "AWS S3 Bucket",
+      ],
+      // companyUrl: "https://vyc-c5zkr.ondigitalocean.app/",
+    },
+    {
+      id: 2,
+      position: "Backend Developer",
       company: "Verify Your Customer",
       location: "Remote",
       period: "2025 - Present",
@@ -50,7 +81,7 @@ export default function Experience() {
       companyUrl: "https://vyc-c5zkr.ondigitalocean.app/",
     },
     {
-      id: 2,
+      id: 3,
       position: "Backend Developer",
       company: "Uwana Energy",
       location: "Ikoyi, Lagos",
@@ -80,7 +111,7 @@ export default function Experience() {
       companyUrl: "https://uwanaconnect.com/",
     },
     {
-      id: 3,
+      id: 4,
       position: "Backend Developer",
       company: "Sokozuri Africa",
       location: "Lekki, Lagos",
@@ -113,7 +144,7 @@ export default function Experience() {
       companyUrl: "https://www.sokozuri.com/",
     },
     {
-      id: 4,
+      id: 5,
       position: "Backend Developer",
       company: "Nupat Technologies",
       location: "Yaba, Lagos",
@@ -129,7 +160,7 @@ export default function Experience() {
       companyUrl: "https://nupat.com/",
     },
     {
-      id: 5,
+      id: 6,
       position: "Backend Developer",
       company: "Qoinpal",
       location: "Yaba, Lagos",
