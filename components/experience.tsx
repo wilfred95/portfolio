@@ -25,7 +25,7 @@ export default function Experience() {
       id: 1,
       position: "Backend Developer",
       company: "Luftsocial",
-      location: "Remote",
+      location: "Remote(Upwork)",
       period: "2025 - Present",
       description:
         "Led the development of a real-time messaging and notification system using NestJS and WebSockets, supporting 10,000+ concurrent connections. Architected a multi-channel notification infrastructure (In-App, Push, Email) that improved user engagement by 65%.",
@@ -56,7 +56,7 @@ export default function Experience() {
       id: 2,
       position: "Backend Developer",
       company: "Verify Your Customer",
-      location: "Remote",
+      location: "Remote(Contract)",
       period: "2025 - Present",
       description:
         "Leading backend development for a digital identity verification platform that offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",
@@ -84,7 +84,7 @@ export default function Experience() {
       id: 3,
       position: "Backend Developer",
       company: "Uwana Energy",
-      location: "Ikoyi, Lagos",
+      location: "Ikoyi, Lagos (Full - Time)",
       period: "2024 - Present",
       description:
         "Leading backend development for a clean energy platform connecting providers with consumers.",
@@ -114,8 +114,8 @@ export default function Experience() {
       id: 4,
       position: "Backend Developer",
       company: "Sokozuri Africa",
-      location: "Lekki, Lagos",
-      period: "2023 - 2025",
+      location: "Lekki, Lagos (Contract)",
+      period: "2024 - 2025",
       description:
         "Worked on full-stack development for web applications. Focused on backend services and database optimization for high-traffic web platforms.",
       responsibilities: [
@@ -147,7 +147,7 @@ export default function Experience() {
       id: 5,
       position: "Backend Developer",
       company: "Nupat Technologies",
-      location: "Yaba, Lagos",
+      location: "Yaba, Lagos (Full - Time)",
       period: "2022 - 2023",
       description:
         "Contributed to the Nupat E-learning platform by designing the database schema and leading backend development, integrating third-party services such as payment gateways and authentication providers.",
@@ -163,7 +163,7 @@ export default function Experience() {
       id: 6,
       position: "Backend Developer",
       company: "Qoinpal",
-      location: "Yaba, Lagos",
+      location: "Yaba, Lagos (Full - Time)",
       period: "2022 - 2023",
       description:
         "Contributed to the Nupat E-learning platform by designing the database schema and leading backend development, integrating third-party services such as payment gateways and authentication providers.",
