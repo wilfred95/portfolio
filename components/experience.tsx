@@ -85,7 +85,7 @@ export default function Experience() {
       position: "Backend Developer",
       company: "Uwana Energy",
       location: "Ikoyi, Lagos (Full - Time)",
-      period: "2024 - Present",
+      period: "2024 - 2025",
       description:
         "Leading backend development for a clean energy platform connecting providers with consumers.",
       responsibilities: [
