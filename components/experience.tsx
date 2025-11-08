@@ -24,9 +24,40 @@ export default function Experience() {
     {
       id: 1,
       position: "Backend Developer",
+      company: "Independent Purchasing Company(IPC-Africa)",
+      location: "Lekki Phase 1",
+      period: "Sep 2025 - Present",
+      description:
+        "Led the backend development for Relay Pilot (https://relaypilot.com), a logistics platform and mobile app that connects delivery companies, riders, and restaurants.",
+      responsibilities: [
+        "Built a referral lifecycle service that validates company-specific configs, records referrers/referees, and automatically settles rewards once target trips are met by invoking wallet credits and multi-channel alerts, ensuring every referral flows through one transactional path",
+        "Delivered referral analytics endpoints that aggregate by referrer, join rider profiles, and roll up payout statuses in MongoDB pipelines so ops teams can filter by status/date without ad‑hoc queries",
+        "Led the rider incentive suite, from templated bonus scheduling with wallet/OTP safeguards to per-rider progress tracking that bumps statuses and payouts as trips stream in, keeping incentives auditable even when campaigns repeat weekly",
+        "Rolled out an event-driven notification stack that fans out email/SMS/push/in-app jobs via BullMQ while respecting tenant-level preference matrices, so every alert is policy-compliant by design",
+        "Designed a multi-tenant Socket.IO gateway that tracks devices per user, streams rider locations, multiplexes logistics/order rooms, and rebroadcasts order-state deltas so dispatchers and riders stay in sync in under a second",
+       
+      ],
+      technologies: [
+        "Node.js",
+        "Nestjs",
+        "Mongodb",
+        "Docker",
+        "Mongoose",
+        "Redis",
+        "Bullmq",
+        "Firebase",
+        "WebSockets",
+        "Socket.IO",
+        "AWS S3 Bucket",
+      ],
+      companyUrl: "https://www.ipc-africa.com/",
+    },
+    {
+      id: 1,
+      position: "Backend Developer",
       company: "Luftsocial",
       location: "Remote(Upwork)",
-      period: "2025 - Present",
+      period: "May 2025 - Present",
       description:
         "Led the development of a real-time messaging and notification system using NestJS and WebSockets, supporting 10,000+ concurrent connections. Architected a multi-channel notification infrastructure (In-App, Push, Email) that improved user engagement by 65%.",
       responsibilities: [
@@ -57,7 +88,7 @@ export default function Experience() {
       position: "Backend Developer",
       company: "Verify Your Customer",
       location: "Remote(Contract)",
-      period: "2025 - Present",
+      period: "April 2025 - Present",
       description:
         "Leading backend development for a digital identity verification platform that offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",
       responsibilities: [
@@ -85,7 +116,7 @@ export default function Experience() {
       position: "Backend Developer",
       company: "Uwana Energy",
       location: "Ikoyi, Lagos (Full - Time)",
-      period: "2024 - 2025",
+      period: "June 2024 - January 2025",
       description:
         "Leading backend development for a clean energy platform connecting providers with consumers.",
       responsibilities: [
@@ -115,7 +146,7 @@ export default function Experience() {
       position: "Backend Developer",
       company: "Sokozuri Africa",
       location: "Lekki, Lagos (Contract)",
-      period: "2024 - 2025",
+      period: "Aug 2024 - March 2025",
       description:
         "Worked on full-stack development for web applications. Focused on backend services and database optimization for high-traffic web platforms.",
       responsibilities: [
@@ -148,7 +179,7 @@ export default function Experience() {
       position: "Backend Developer",
       company: "Nupat Technologies",
       location: "Yaba, Lagos (Full - Time)",
-      period: "2022 - 2023",
+      period: "Oct 2023 - June 2024",
       description:
         "Contributed to the Nupat E-learning platform by designing the database schema and leading backend development, integrating third-party services such as payment gateways and authentication providers.",
       responsibilities: [
@@ -163,8 +194,8 @@ export default function Experience() {
       id: 6,
       position: "Backend Developer",
       company: "Qoinpal",
-      location: "Yaba, Lagos (Full - Time)",
-      period: "2022 - 2023",
+      location: "Remote",
+      period: "May 2023 - Nov 2024",
       description:
         "Contributed to the Nupat E-learning platform by designing the database schema and leading backend development, integrating third-party services such as payment gateways and authentication providers.",
       responsibilities: [
