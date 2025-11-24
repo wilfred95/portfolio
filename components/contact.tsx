@@ -34,7 +34,7 @@ export default function Contact() {
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
-      url: "https://www.linkedin.com/in/ayomide-wilfred-95083a104/",
+      url: "https://www.linkedin.com/in/ayomide-adeyemi-95083a104/",
       label: "LinkedIn",
     },
     {
