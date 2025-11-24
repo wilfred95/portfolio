@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, FileText } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
 import { useTheme } from "next-themes"
@@ -47,8 +48,10 @@ export default function Hero() {
 
       <div
         ref={containerRef}
-        className="container mx-auto px-4 flex flex-col items-center text-center z-10 transition-transform duration-200 ease-out"
+        className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 z-10 transition-transform duration-200 ease-out"
       >
+        {/* Left side - Content */}
+        <div className="max-w-2xl text-center md:text-left">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -117,6 +120,23 @@ export default function Hero() {
               Download CV
             </a>
           </Button>
+        </motion.div>
+        </div>
+
+        {/* Right side - Headshot */}
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-xl"
+        >
+          <Image
+            src="/my-headshot.jpg"
+            alt="Ayomide Wilfred"
+            fill
+            className="object-cover"
+            priority
+          />
         </motion.div>
       </div>
 

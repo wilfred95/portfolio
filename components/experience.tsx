@@ -53,7 +53,7 @@ export default function Experience() {
       companyUrl: "https://www.ipc-africa.com/",
     },
     {
-      id: 1,
+      id: 2,
       position: "Backend Developer",
       company: "Luftsocial",
       location: "Remote(Upwork)",
@@ -84,7 +84,7 @@ export default function Experience() {
       // companyUrl: "https://vyc-c5zkr.ondigitalocean.app/",
     },
     {
-      id: 2,
+      id: 3,
       position: "Backend Developer",
       company: "Verify Your Customer",
       location: "Remote(Contract)",
@@ -112,7 +112,7 @@ export default function Experience() {
       companyUrl: "https://vyc-c5zkr.ondigitalocean.app/",
     },
     {
-      id: 3,
+      id: 4,
       position: "Backend Developer",
       company: "Uwana Energy",
       location: "Ikoyi, Lagos (Full - Time)",
@@ -142,7 +142,7 @@ export default function Experience() {
       companyUrl: "https://uwanaconnect.com/",
     },
     {
-      id: 4,
+      id: 5,
       position: "Backend Developer",
       company: "Sokozuri Africa",
       location: "Lekki, Lagos (Contract)",
@@ -175,7 +175,7 @@ export default function Experience() {
       companyUrl: "https://www.sokozuri.com/",
     },
     {
-      id: 5,
+      id: 6,
       position: "Backend Developer",
       company: "Nupat Technologies",
       location: "Yaba, Lagos (Full - Time)",
@@ -191,7 +191,7 @@ export default function Experience() {
       companyUrl: "https://nupat.com/",
     },
     {
-      id: 6,
+      id: 7,
       position: "Backend Developer",
       company: "Qoinpal",
       location: "Remote",

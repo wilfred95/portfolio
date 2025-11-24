@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { Menu, X, Sun, Moon, FileText } from "lucide-react";
+import { Menu, X, Sun, Moon, FileText, Linkedin, Twitter } from "lucide-react";
 import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
@@ -89,6 +89,44 @@ export default function Header() {
               <span className="sr-only">Toggle theme</span>
             </Button>
           )}
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="ml-2"
+          >
+            <a 
+              href="https://www.linkedin.com/in/ayomide-adeyemi-95083a104/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
+              {mounted && (
+                <Linkedin className={`h-5 w-5 ${
+                  theme === "dark" ? "text-zinc-400 hover:text-white" : "text-zinc-600 hover:text-zinc-900"
+                }`} />
+              )}
+            </a>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="ml-2"
+          >
+            <a 
+              href="https://x.com/AyomideWilfred9" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Twitter Profile"
+            >
+              {mounted && (
+                <Twitter className={`h-5 w-5 ${
+                  theme === "dark" ? "text-zinc-400 hover:text-white" : "text-zinc-600 hover:text-zinc-900"
+                }`} />
+              )}
+            </a>
+          </Button>
         </nav>
 
         {/* Mobile Navigation Toggle */}

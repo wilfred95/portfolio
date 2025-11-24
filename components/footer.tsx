@@ -1,6 +1,6 @@
 "use client"
 
-import { Heart } from "lucide-react";
+import { Heart, Linkedin, Twitter } from "lucide-react";
 import Logo from "@/components/logo";
 import { useTheme } from "next-themes"
 
@@ -24,10 +24,32 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className="text-zinc-500 text-sm">
+          <div className="text-zinc-500 text-sm flex items-center space-x-6">
             <span className="font-mono">
               Backend Developer | AI Builder | Sustainability Enthusiast
             </span>
+            <a
+              href="https://www.linkedin.com/in/ayomide-adeyemi-95083a104/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hover:opacity-75 transition-opacity ${
+                theme === "light" ? "text-zinc-600" : "text-zinc-400"
+              }`}
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <a
+              href="https://x.com/AyomideWilfred9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hover:opacity-75 transition-opacity ${
+                theme === "light" ? "text-zinc-600" : "text-zinc-400"
+              }`}
+              aria-label="Twitter Profile"
+            >
+              <Twitter className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </div>
