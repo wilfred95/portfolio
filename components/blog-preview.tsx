@@ -45,6 +45,19 @@ const blogPosts = [
     image: "/supabase.png",
     alt: "Supabase and Sequelize Tutorial",
   },
+    {
+    id: 4,
+    title:
+      "Finding Items in a Supermarket: A Story About Optimizing Geolocation in Software",
+    excerpt:
+      "This article uses a supermarket analogy to explain when to use database aggregations versus in-memory calculations for geolocation operations in software development.",
+    date: "October 2025",
+    readTime: "10 min read",
+    externalUrl:
+      "https://www.notion.so/ayowilfred/Finding-Items-in-a-Supermarket-A-Story-About-Optimizing-Geolocation-in-Software-2884ea516abd8068bda6f8e8dbd966d5",
+    image: "/geolocation.png",
+    alt: "Geolocation Optimization Article",
+  },
 ];
 
 const fadeIn = {
