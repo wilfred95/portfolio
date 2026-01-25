@@ -38,7 +38,7 @@ export default function Header() {
           <span
             className={`font-mono text-lg font-bold tracking-tight ${theme === "light" ? "text-zinc-800" : "text-white"}`}
           >
-            Ayomide Wilfred
+            Ayomide Wilfred Adeyemi
           </span>
         </Link>
 
