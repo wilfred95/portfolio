@@ -54,7 +54,7 @@ export default function About() {
             className="flex flex-col justify-center"
           >
             <p className={`text-lg mb-6 ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}>
-              I am a back-end software engineer with additional expertise in
+              I am a back-end software engineer based in <span className="text-blue-400 font-semibold">Lagos, Nigeria</span> with additional expertise in
               DevOps. With over 4 years of experience, I have worked with{" "}
               <span className="text-blue-400 font-semibold">startups</span> on
               diverse projects, ranging from web RESTful APIs to asynchronous

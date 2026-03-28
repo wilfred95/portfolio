@@ -69,7 +69,7 @@ export default function Hero() {
             theme === "light" ? "from-zinc-800 via-blue-500 to-red-600" : "from-white via-blue-500 to-red-600"
           }`}
         >
-          Backend Developer
+          Backend Developer in Lagos, Nigeria
         </motion.h1>
 
         <motion.div
@@ -131,8 +131,8 @@ export default function Hero() {
           className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-xl"
         >
           <Image
-            src="/my-headshot.jpg"
-            alt="Ayomide Wilfred"
+            src="https://uxeauxsastynwaimfeyp.supabase.co/storage/v1/object/public/Ayomide/ISTU1386-Edit%20copy%202%20(1).jpg"
+            alt="Ayomide Wilfred - Backend Developer in Lagos, Nigeria"
             fill
             className="object-cover"
             priority
