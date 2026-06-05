@@ -58,6 +58,19 @@ const blogPosts = [
     image: "/geolocation.png",
     alt: "Geolocation Optimization Article",
   },
+      {
+    id: 5,
+    title:
+      "How I Built Relay Pilot: Lessons From Building a Multi-Sided Logistics Platform in Africa",
+    excerpt:
+      "The story of taking Relay Pilot from an empty repository to delivery infrastructure serving riders, businesses, and logistics companies across Africa — covering geospatial rider matching, real-time WebSockets, prepaid wallets, a B2B integration platform, and the engineering decisions (idempotency, transaction boundaries, proper indexing) that kept it alive under production load.",
+    date: "June 2026",
+    readTime: "10 min read",
+    externalUrl:
+      "https://ayowilfred.notion.site/How-I-Built-Relay-Pilot-Lessons-From-Building-a-Multi-Sided-Logistics-Platform-in-Africa-3764ea516abd80b88eedd0055b167444",
+    image: "/735ab4eb-1f3b-44cb-8986-a1cf49904d98.png",
+    alt: "Geolocation Optimization Article",
+  },
 ];
 
 const fadeIn = {

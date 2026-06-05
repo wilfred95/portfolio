@@ -64,14 +64,25 @@ export default function Header() {
                 : "border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:text-white"
             }`}
             asChild
-            onClick={(e) => {
-              e.preventDefault();
-              window.open("/Resume.pdf", "_blank");
-            }}
           >
-            <a href="/Resume.pdf" download className="flex items-center">
+            <a href="/Resume-Work.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
               <FileText className="h-4 w-4 mr-2" />
-              Download CV
+              Work CV
+            </a>
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className={`hover:border-blue-500 ${
+              theme === "light"
+                ? "border-zinc-300 text-zinc-800 bg-white hover:bg-zinc-100"
+                : "border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:text-white"
+            }`}
+            asChild
+          >
+            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <FileText className="h-4 w-4 mr-2" />
+              Academic CV
             </a>
           </Button>
           {mounted && (
@@ -187,14 +198,25 @@ export default function Header() {
                     : "border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:text-white"
                 }`}
                 asChild
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("/Resume.pdf", "_blank");
-                }}
               >
-                <a href="/Resume.pdf" download className="flex items-center">
+                <a href="/Resume-Work.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <FileText className="h-4 w-4 mr-2" />
-                  Download CV
+                  Work CV
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className={`w-full justify-center hover:border-blue-500 ${
+                  theme === "light"
+                    ? "border-zinc-300 text-zinc-800 bg-white hover:bg-zinc-100"
+                    : "border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:text-white"
+                }`}
+                asChild
+              >
+                <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <FileText className="h-4 w-4 mr-2" />
+                  Academic CV
                 </a>
               </Button>
             </nav>

@@ -110,14 +110,26 @@ export default function Hero() {
                 : "border-zinc-600 text-white hover:text-white"
             }`}
             asChild
-            onClick={(e) => {
-              e.preventDefault();
-              window.open("/Resume.pdf", "_blank");
-            }}
           >
-            <a href="/Resume.pdf" download>
+            <a href="/Resume-Work.pdf" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-4 w-4" />
-              Download CV
+              Work CV
+            </a>
+          </Button>
+
+          <Button
+            size="lg"
+            variant="outline"
+            className={`hover:border-blue-500 ${
+              theme === "light"
+                ? "border-zinc-300 text-zinc-800 bg-white hover:text-blue-600"
+                : "border-zinc-600 text-white hover:text-white"
+            }`}
+            asChild
+          >
+            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <FileText className="mr-2 h-4 w-4" />
+              Academic CV
             </a>
           </Button>
         </motion.div>

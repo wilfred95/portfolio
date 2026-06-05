@@ -22,8 +22,29 @@ type Project = {
 
 export default function Projects() {
   const [projects] = useState<Project[]>([
-    {
+        {
       id: 1,
+      title: "Relay P",
+      description:
+        "A multi-sided logistics dispatch platform connecting logistics companies, riders, businesses, and third-party integrators across Nigeria.",
+      image: "/relay.png",
+      tags: [
+        "NestJS",
+        "TypeScript",
+        "MongoDB",
+        "Mongoose",
+        "Redis",
+        "BullMQ",
+        "Next.js",
+        "WebSockets",
+        "Socket.IO",
+        "AWS S3",
+      ],
+      demoUrl: "https://relaypilot.com",
+      repoUrl: "https://relaypilot.com",
+    },
+    {
+      id: 2,
       title: "Uwana Connect",
       description:
         "A platform connecting clean energy providers with consumers, built with Node.js, Nestjs and MySQL using Clean Architecture principles.",
@@ -42,7 +63,7 @@ export default function Projects() {
       repoUrl: "https://uwanaconnect.com/packages?page=1",
     },
     {
-      id: 2,
+      id: 3,
       title: "Sokozuri Africa",
       description:
         "Sokozuri Africa is an online e-commerce platform designed to empower African vendors, artisans, and entrepreneurs by providing them with a digital marketplace to showcase and sell their products and services across the continent.",
@@ -59,7 +80,7 @@ export default function Projects() {
       repoUrl: "https://www.sokozuri.com/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Verify Your Customer",
       description:
         "Verify Your Customers (VYC) is a digital identity verification solution. It offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",
@@ -77,7 +98,7 @@ export default function Projects() {
       repoUrl: "https://vyc-c5zkr.ondigitalocean.app/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Verify Your Customer",
       description:
         "Verify Your Customers (VYC) is a digital identity verification solution. It offers features to authenticate and onboard customers securely, possibly for fintech or KYC-related services.",

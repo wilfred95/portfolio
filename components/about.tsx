@@ -68,7 +68,27 @@ export default function About() {
               integration and sustainable technology solutions that make a
               positive impact.
             </p>
-            <div className="flex justify-start">
+            <div className="flex flex-wrap justify-start gap-3">
+              <Button
+                variant="outline"
+                size="lg"
+                className={`hover:border-blue-500 hover:bg-zinc-800 hover:text-white ${
+                  theme === "light"
+                    ? "border-zinc-300 text-zinc-800 bg-white"
+                    : "border-zinc-700 text-zinc-300 bg-zinc-800"
+                }`}
+                asChild
+              >
+                <a
+                  href="/Resume-Work.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <FileText className="h-5 w-5 mr-2" />
+                  Work CV
+                </a>
+              </Button>
               <Button
                 variant="outline"
                 size="lg"
@@ -81,11 +101,12 @@ export default function About() {
               >
                 <a
                   href="/Resume.pdf"
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center"
                 >
                   <FileText className="h-5 w-5 mr-2" />
-                  Download My CV
+                  Academic CV
                 </a>
               </Button>
             </div>
