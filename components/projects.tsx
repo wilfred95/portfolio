@@ -24,7 +24,7 @@ export default function Projects() {
   const [projects] = useState<Project[]>([
         {
       id: 1,
-      title: "Relay P",
+      title: "Relay Pilot",
       description:
         "A multi-sided logistics dispatch platform connecting logistics companies, riders, businesses, and third-party integrators across Nigeria.",
       image: "/relay.png",
