@@ -42,7 +42,7 @@ export default function Hero() {
 
   return (
     <section
-    className={`relative h-screen flex items-center justify-center overflow-hidden geometric-bg ${theme === "light" ? "bg-white" : ""}`}
+    className={`relative min-h-screen py-24 md:py-0 flex items-center justify-center overflow-hidden geometric-bg ${theme === "light" ? "bg-white" : ""}`}
   >
       <div className="absolute inset-0 grid-pattern"></div>
 
@@ -82,11 +82,22 @@ export default function Hero() {
           <span className="text-red-500">Sustainability Enthusiast</span>
         </motion.div>
 
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className={`-mt-5 mb-8 text-base md:text-lg font-mono ${
+            theme === "light" ? "text-zinc-600" : "text-zinc-400"
+          }`}
+        >
+          Electrical &amp; Electronics Engineer · Power Systems · Field Operations
+        </motion.p>
+
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row sm:flex-wrap gap-4"
         >
           <Button
             size="lg"
@@ -132,6 +143,23 @@ export default function Hero() {
               Academic CV
             </a>
           </Button>
+
+          <Button
+            size="lg"
+            variant="outline"
+            className={`hover:border-blue-500 ${
+              theme === "light"
+                ? "border-zinc-300 text-zinc-800 bg-white hover:text-blue-600"
+                : "border-zinc-600 text-white hover:text-white"
+            }`}
+            asChild
+          >
+            {/* TODO(Ayomide): upload the Engineering CV to public/Resume-Engineering.pdf */}
+            <a href="/Resume-Engineering.pdf" target="_blank" rel="noopener noreferrer">
+              <FileText className="mr-2 h-4 w-4" />
+              Engineering CV
+            </a>
+          </Button>
         </motion.div>
         </div>
 
@@ -143,7 +171,8 @@ export default function Hero() {
           className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-xl"
         >
           <Image
-            src="/my-headshot.jpg"
+            // Previously loaded from Supabase storage; that project no longer resolves (NXDOMAIN), so the local copy is used.
+            src="/my-headshot-800.jpg"
             alt="Ayomide Wilfred - Backend Developer in Lagos, Nigeria"
             fill
             className="object-cover"

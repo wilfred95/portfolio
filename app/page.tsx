@@ -9,6 +9,8 @@ import BlogPreview from "@/components/blog-preview"
 import LoadingSpinner from "@/components/ui/loading-spinner"
 import Education from "@/components/education"
 import Experience from "@/components/experience"
+import EngineeringExperience from "@/components/engineering-experience"
+import Certifications from "@/components/certifications"
 
 export { metadata }
 
@@ -28,7 +30,13 @@ export default function Home() {
         <Experience />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
+        <EngineeringExperience />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
         <Education />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Certifications />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <TechStack />

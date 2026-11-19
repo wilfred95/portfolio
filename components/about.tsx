@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Server, Leaf, Music, FileText } from "lucide-react";
+import { Code2, Server, Leaf, Music, FileText, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes"
@@ -68,6 +68,16 @@ export default function About() {
               integration and sustainable technology solutions that make a
               positive impact.
             </p>
+            <p className={`text-lg mb-6 ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}>
+              Before and alongside software, I built a strong electrical
+              engineering foundation: six years operating 7.5 MVA and 15 MVA
+              33/11 kV injection substations at Ibadan Electricity Distribution
+              Company (IBEDC) with zero lost-time incidents, process control and
+              instrumentation work at Procter &amp; Gamble, and solar PV
+              installations at the University of Ibadan. This combination lets
+              me work across field equipment and the real-time data systems
+              behind it.
+            </p>
             <div className="flex flex-wrap justify-start gap-3">
               <Button
                 variant="outline"
@@ -107,6 +117,27 @@ export default function About() {
                 >
                   <FileText className="h-5 w-5 mr-2" />
                   Academic CV
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className={`hover:border-blue-500 hover:bg-zinc-800 hover:text-white ${
+                  theme === "light"
+                    ? "border-zinc-300 text-zinc-800 bg-white"
+                    : "border-zinc-700 text-zinc-300 bg-zinc-800"
+                }`}
+                asChild
+              >
+                {/* TODO(Ayomide): upload the Engineering CV to public/Resume-Engineering.pdf */}
+                <a
+                  href="/Resume-Engineering.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <FileText className="h-5 w-5 mr-2" />
+                  Engineering CV
                 </a>
               </Button>
             </div>
@@ -180,6 +211,22 @@ export default function About() {
                 </h3>
                 <p className={`text-sm ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`}>
                   Finding harmony in code and music
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card
+              className={`col-span-2 border-zinc-700 hover:border-yellow-500 transition-colors duration-300 ${
+                theme === "light" ? "bg-white" : "bg-zinc-800"
+              }`}
+            >
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <Zap className="h-10 w-10 text-yellow-500 mb-4" />
+                <h3 className={`text-lg font-semibold mb-2 ${theme === "light" ? "text-zinc-800" : "text-white"}`}>
+                  Electrical Engineering (HV Power Systems)
+                </h3>
+                <p className={`text-sm ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`}>
+                  33/11 kV substation operations, process control and solar PV
                 </p>
               </CardContent>
             </Card>

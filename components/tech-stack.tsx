@@ -7,8 +7,9 @@ import { useTheme } from "next-themes";
 type TechItem = {
   name: string;
   icon: string;
-  category: "languages" | "frameworks" | "tools" | "ai" | "databases";
-  proficiency: number;
+  category: "languages" | "frameworks" | "tools" | "ai" | "databases" | "engineering";
+  // Optional: Engineering Tools entries have no proficiency score yet.
+  proficiency?: number;
 };
 
 export default function TechStack() {
@@ -52,6 +53,16 @@ export default function TechStack() {
     { name: "Flowise AI", icon: "🧠", category: "ai", proficiency: 85 },
     { name: "TensorFlow", icon: "📊", category: "ai", proficiency: 70 },
     { name: "OpenAI API", icon: "🤖", category: "ai", proficiency: 80 },
+
+    // Engineering Tools
+    // TODO(Ayomide): add icons and proficiency % for these if you want the
+    // progress bar shown like the other tabs (left blank rather than guessed).
+    { name: "MATLAB/Simulink", icon: "", category: "engineering" },
+    { name: "RSLogix 500/5000 (Studio 5000)", icon: "", category: "engineering" },
+    { name: "PLCs (Allen-Bradley, Siemens, Schneider)", icon: "", category: "engineering" },
+    { name: "HMI", icon: "", category: "engineering" },
+    { name: "AutoCAD", icon: "", category: "engineering" },
+    { name: "Elmer FEM", icon: "", category: "engineering" },
   ];
 
   const categories = [
@@ -60,6 +71,7 @@ export default function TechStack() {
     { id: "databases", name: "Databases" },
     { id: "tools", name: "Tools" },
     { id: "ai", name: "AI & ML" },
+    { id: "engineering", name: "Engineering Tools" },
   ];
 
   const fadeIn = {
@@ -109,7 +121,7 @@ export default function TechStack() {
 
         <div className="max-w-3xl mx-auto">
           {/* Custom Tab Navigation */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 mb-8">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -140,16 +152,20 @@ export default function TechStack() {
                 >
                   <div className="flex flex-col items-center">
                     <div className="text-4xl mb-3">{item.icon}</div>
-                    <h3 className="text-xl font-bold mb-4">{item.name}</h3>
-                    <div className="w-full bg-zinc-800 rounded-full h-2.5 mb-2">
-                      <div
-                        className="h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-red-500"
-                        style={{ width: `${item.proficiency}%` }}
-                      ></div>
-                    </div>
-                    <span className="text-sm text-zinc-400">
-                      {item.proficiency}%
-                    </span>
+                    <h3 className={`text-xl font-bold text-center ${item.proficiency !== undefined ? "mb-4" : ""}`}>{item.name}</h3>
+                    {item.proficiency !== undefined && (
+                      <>
+                        <div className="w-full bg-zinc-800 rounded-full h-2.5 mb-2">
+                          <div
+                            className="h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-red-500"
+                            style={{ width: `${item.proficiency}%` }}
+                          ></div>
+                        </div>
+                        <span className="text-sm text-zinc-400">
+                          {item.proficiency}%
+                        </span>
+                      </>
+                    )}
                   </div>
                 </motion.div>
               ))}

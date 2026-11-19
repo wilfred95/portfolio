@@ -11,6 +11,7 @@ import { useTheme } from "next-themes"
 type Publication = {
   title: string;
   url: string;
+  note?: string;
 };
 
 type Education = {
@@ -39,6 +40,12 @@ export default function Education() {
         {
           title: "Gas Monitoring and Leakages Detection Using IoT",
           url: "https://aujet.adelekeuniversity.edu.ng/index.php/aujet/article/view/299",
+        },
+        {
+          title:
+            "Separating Motion Artifacts from Biomarker Signals in Flexible MoS₂ FET Cortisol Sensors: A Coupled Multiphysics Model and Finite-Element Analysis",
+          url: "https://doi.org/10.21203/rs.3.rs-11606589/v1",
+          note: "Preprint, Research Square, 2026, under peer review",
         },
       ],
       courses: [
@@ -184,6 +191,12 @@ export default function Education() {
                               >
                                 {publication.title}
                               </Link>
+                              {publication.note && (
+                                <span className="text-zinc-500 text-sm">
+                                  {" "}
+                                  ({publication.note})
+                                </span>
+                              )}
                             </li>
                           ))}
                         </ul>
